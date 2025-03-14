@@ -10,12 +10,12 @@ export class UtilsService {
     const wordMap: { [key: string]: string[] } = {};
     const anagrams: string[] = [];
     arr.forEach((obj: AnagramInterface): void => {
-      if (obj.palavra) {
-        const filteredWords: string = obj.palavra.split('').sort().join('');
+      if (obj.word) {
+        const filteredWords: string = obj.word.split('').sort().join('');
         if (wordMap[filteredWords]) {
-          wordMap[filteredWords].push(obj.palavra);
+          wordMap[filteredWords].push(obj.word);
         } else {
-          wordMap[filteredWords] = [obj.palavra];
+          wordMap[filteredWords] = [obj.word];
         }
       }
     });

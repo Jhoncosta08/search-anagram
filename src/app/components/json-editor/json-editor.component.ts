@@ -15,21 +15,15 @@ export class JsonEditorComponent implements OnInit, OnDestroy {
   @Output() jsonEditorData: EventEmitter<any> = new EventEmitter();
   editor!: JSONEditor;
   jsonData: AnagramInterface[] = [
-    { id: 1, palavra: "amor"},
-    { id: 2, palavra: "roma"},
-    { id: 3, palavra: "mora"},
-    { id: 4, palavra: "banco"},
-    { id: 5, palavra: "cabo"},
-    { id: 6, palavra: "saco"},
-    { id: 7, palavra: "caos"},
-    { id: 8, palavra: "cavalo"},
-    { id: 9, palavra: "volta"},
-    { id: 10, palavra: "pato"},
-    { id: 11, palavra: "topa"},
-    { id: 12, palavra: "ponta"},
-    { id: 13, palavra: "lobo"},
-    { id: 14, palavra: "bolo"}
-  ];
+    { id: 1, word: "listen" },
+    { id: 2, word: "silent" },
+    { id: 3, word: "enlist" },
+    { id: 4, word: "cat" },
+    { id: 5, word: "act" },
+    { id: 6, word: "tac" },
+    { id: 7, word: "apple" },
+    { id: 8, word: "pearl" }
+  ]
   showInvalidJsonMsg: boolean = false;
 
   ngOnInit(): void {
@@ -51,7 +45,7 @@ export class JsonEditorComponent implements OnInit, OnDestroy {
 
   sendJsonEditorData(): void {
     const jsonData: AnagramInterface[] = this.editor.get();
-    const hasIdAndWord: boolean = jsonData.every((item: AnagramInterface): boolean => item.hasOwnProperty('id') && item.hasOwnProperty('palavra'));
+    const hasIdAndWord: boolean = jsonData.every((item: AnagramInterface): boolean => item.hasOwnProperty('id') && item.hasOwnProperty('word'));
     if (!hasIdAndWord) {
       this.showInvalidJsonMsg = true;
       this.jsonEditorData.emit([]);

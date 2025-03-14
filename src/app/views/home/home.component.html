@@ -6,8 +6,8 @@
     </div>
 
     <div class="col-sm">
-      <h1>Anagramas Encontrados:</h1>
-      <small *ngIf="anagrams.length <= 0">Nenhum anagrama encontrado</small>
+      <h1>Found Anagrams</h1>
+      <small *ngIf="anagrams.length <= 0">No anagrams found.</small>
       <ul *ngIf="anagrams.length > 0">
         <li *ngFor="let anagram of anagrams">{{ anagram }}</li>
       </ul>

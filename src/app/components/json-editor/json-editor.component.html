@@ -1,0 +1,20 @@
+<div class="row">
+  <div class="col-sm-12">
+    <div #editorContainer id="jsonEditorContainer"></div>
+  </div>
+</div>
+
+<app-simple-button [buttonText]="'CHECK ANAGRAM'" (click)="sendJsonEditorData()"></app-simple-button>
+
+<div *ngIf="showInvalidJsonMsg" class="row json-invalid-error">
+  <div class="col-sm">
+    <p>
+      JSON Inválido, o JSON deve conter a chave "palavra" para ser analisado. <br/>
+      exemplo:<br/>
+    </p>
+    <code>
+      &#123;id: 1, palavra: "amor"&#125;, <br/>
+      &#123;id: 2, palavra: "roma"&#125;,
+    </code>
+  </div>
+</div>

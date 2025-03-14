@@ -1,1 +1,56 @@
-/* You can add global styles to this file, and also import other style files */
+@use 'custom-theme' as *;
+
+.container-fluid {
+  padding: 0;
+}
+
+body {
+  background-color: $secondary-dark;
+}
+
+p, h1 {
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-toggler,
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler:hover,
+.navbar-toggler:target,
+button:focus,
+button:active,
+button:hover,
+button:target,
+input:focus,
+input:active,
+input:hover,
+input:target,
+textarea:focus,
+textarea:active,
+textarea:hover,
+textarea:target,{
+  outline: 0;
+  -webkit-appearance: none;
+  box-shadow: none;
+  border: none;
+}
+
+::-webkit-scrollbar {
+  width: 0.5rem;
+  height: 0.5rem;
+}
+
+::-webkit-scrollbar-track {
+  background:  $secondary-one;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: $secondary-three;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: $primary-three;
+}

@@ -1,0 +1,32 @@
+@use 'custom-theme' as *;
+
+.social-icons {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 3rem;
+
+  & svg {
+    margin-right: 1rem;
+    width: auto;
+    height: 3rem;
+    border: 1px solid $dark;
+    padding: 0.5rem;
+    border-radius: 10px;
+    cursor: pointer;
+    color: $dark;
+    transition: 0.4s ease-out;
+  }
+
+  & svg:hover {
+    transition: 0.4s ease-out;
+    color: $primary-dark;
+    border-color: $primary-dark;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .social-icons {
+    justify-content: center;
+  }
+}

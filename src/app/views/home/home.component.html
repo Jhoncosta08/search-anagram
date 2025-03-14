@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="row">
+
+    <div class="col-sm">
+      <app-json-editor (jsonEditorData)="getJsonEditorData($event)"></app-json-editor>
+    </div>
+
+    <div class="col-sm">
+      <h1>Anagramas Encontrados:</h1>
+      <small *ngIf="anagrams.length <= 0">Nenhum anagrama encontrado</small>
+      <ul *ngIf="anagrams.length > 0">
+        <li *ngFor="let anagram of anagrams">{{ anagram }}</li>
+      </ul>
+    </div>
+
+  </div>
+</div>

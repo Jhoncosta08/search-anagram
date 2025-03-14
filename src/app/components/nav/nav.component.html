@@ -1,0 +1,25 @@
+
+<nav class="navbar navbar-expand-lg">
+  <div class="container">
+
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#mainNavBar"
+      aria-controls="mainNavBar"
+      aria-expanded="false"
+      aria-label="Toggle navigation">
+        <app-hamburger></app-hamburger>
+    </button>
+
+    <div class="row collapse navbar-collapse" id="mainNavBar">
+      <div class="navbar-nav">
+        <a class="nav-link hvr-float" [routerLink]="['/home']" routerLinkActive="active-link"><span class="nav-title-name">JSON ANAGRAM</span></a>
+        <a class="nav-link hvr-float" [routerLink]="['/home']" routerLinkActive="active-link"><span>HOME</span></a>
+        <a class="nav-link hvr-float" [routerLink]="['/dev']" routerLinkActive="active-link"><span>DEV INFORMATION</span></a>
+      </div>
+    </div>
+
+  </div>
+</nav>

@@ -1,0 +1,31 @@
+@use 'custom-theme' as *;
+
+.simple-button {
+  border: none;
+  box-shadow: none;
+  background-color: $secondary-two;
+  width: 100%;
+  max-width: 300px;
+  padding: 10px 15px;
+  border-radius: 0.5rem;
+  opacity: 0.8;
+  color: $primary-dark;
+  margin: 1rem 0;
+}
+
+.isActive, .simple-button:hover {
+  opacity: 1;
+  background-color: $secondary-one;
+}
+
+.outline-btn {
+  background-color: transparent;
+  border: 1px solid $secondary-two;
+  color: $secondary-two;
+}
+
+.isActive, .outline-btn:hover {
+  background-color: $secondary-one;
+  color: $primary-dark;
+  opacity: 1;
+}
